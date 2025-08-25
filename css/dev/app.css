@@ -71,19 +71,13 @@ h6 {
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("../assets/fonts/iconfont.woff2?89b884588316dc7e5abcbe79d79c4087") format("woff2"); 
+	src: url("../assets/fonts/iconfont.woff2?5165929bb4be95a7dd9bc836094d5dde") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
 }
 	[class*="--icon-arrow"]::before { 
 		content: "\f101"; 
-	} 
-	[class*="--icon-scroll"]::before { 
-		content: "\f102"; 
-	} 
-	[class*="--icon-mouse"]::before { 
-		content: "\f103"; 
 	} 
 
 
@@ -298,7 +292,6 @@ html, body {
 }
 .hero__slide::after {
   content: "";
-  background: url("../assets/img/Hero/blur.webp") center/cover no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -475,11 +468,19 @@ html, body {
     align-self: center;
   }
   .swiper-pagination {
+    gap: 0.625rem;
+  }
+  .swiper-pagination {
     flex-direction: row;
     bottom: 1.25rem;
     top: auto;
     right: 50%;
     transform: translate(50%, 0);
+  }
+  .swiper-pagination-bullet {
+    flex-shrink: 0;
+    height: 0.75rem;
+    width: 0.75rem;
   }
 }
 @media (max-width: 29.99875em){
