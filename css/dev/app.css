@@ -292,6 +292,7 @@ html, body {
 }
 .hero__slide::after {
   content: "";
+  background: url("../assets/img/Hero/blur.webp") center/cover no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
