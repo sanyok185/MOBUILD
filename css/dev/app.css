@@ -290,6 +290,16 @@ html, body {
   left: 0;
   object-fit: cover;
 }
+.hero__slide::after {
+  content: "";
+  background: url("../assets/img/Hero/blur.webp") center/cover no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
 .hero__scroll {
   cursor: pointer;
   transition: all 0.35s;
