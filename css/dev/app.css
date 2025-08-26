@@ -903,10 +903,14 @@ body {
   }
   .item-about {
     min-width: 20rem;
-    min-height: 16.25rem;
+    min-height: 16.875rem;
   }
   .item-about__content {
     opacity: 1;
+  }
+  .stages__body {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
   .item-stage {
     padding: 1.5625rem 0rem;
@@ -953,6 +957,12 @@ body {
 @media (max-width: 29.99875em){
   .menu__link {
     padding-bottom: 1.5625rem;
+  }
+  .item-about__content {
+    gap: 0.3125rem;
+  }
+  .item-about__text {
+    gap: 0.3125rem;
   }
   .item-house__about {
     font-size: 0.75rem;
