@@ -5166,6 +5166,67 @@ function initSliders() {
       on: {}
     });
   }
+  if (document.querySelector(".houses__slider")) {
+    new Swiper(".houses__slider", {
+      // <- Вказуємо склас потрібного слайдера
+      // Підключаємо модулі слайдера
+      // для конкретного випадку
+      modules: [Pagination, EffectFade, Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      //autoHeight: true,
+      speed: 1500,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      lazy: true,
+      // Ефекти
+      effect: "fade",
+      autoplay: {
+        delay: 3e3,
+        disableOnInteraction: false
+      },
+      // Пагінація
+      pagination: {
+        el: ".hero__slider .swiper-pagination",
+        clickable: true
+      },
+      // Скроллбар
+      /*
+      scrollbar: {
+      	el: '.swiper-scrollbar',
+      	draggable: true,
+      },
+      */
+      /*
+      // Брейкпоінти
+      breakpoints: {
+      	640: {
+      		slidesPerView: 1,
+      		spaceBetween: 0,
+      		autoHeight: true,
+      	},
+      	768: {
+      		slidesPerView: 2,
+      		spaceBetween: 20,
+      	},
+      	992: {
+      		slidesPerView: 3,
+      		spaceBetween: 20,
+      	},
+      	1268: {
+      		slidesPerView: 4,
+      		spaceBetween: 30,
+      	},
+      },
+      */
+      // Події
+      on: {}
+    });
+  }
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
 function getHash() {

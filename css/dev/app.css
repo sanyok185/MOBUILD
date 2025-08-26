@@ -71,15 +71,15 @@ h6 {
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("../assets/fonts/iconfont.woff2?0b5bdd0d6a62fd63dad9da7f07455568") format("woff2"); 
+	src: url("../assets/fonts/iconfont.woff2?6723dbdaff823a796708d31273b820bc") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
 }
-	[class*="--icon-arrow"]::before { 
+	[class*="--icon-link"]::before { 
 		content: "\f101"; 
 	} 
-	[class*="--icon-link"]::before { 
+	[class*="--icon-arrow"]::before { 
 		content: "\f102"; 
 	} 
 
@@ -509,12 +509,9 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 0.125rem solid #ececec;
-}
-.stages__title {
-  max-width: 41.9375rem;
+  gap: 1.875rem;
 }
 .stages__text {
-  max-width: 33.75rem;
   line-height: 120%;
 }
 .stages__button {
@@ -582,9 +579,35 @@ body {
   /* .houses__label */
   /* .houses__title */
   /* .houses__text */
+  /* .houses__items */
   /* .houses__item */
 }
+.houses__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.houses__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  max-width: 82.5rem;
+  align-items: flex-end;
+}
+.houses__label {
+  margin-bottom: 0.625rem;
+}
+.houses__text {
+  padding-bottom: 3rem;
+}
+.houses__items {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+}
 .item-house {
+  flex: 1;
   /* .item-house__image */
   /* .item-house__name */
   /* .item-house__body */
@@ -593,6 +616,81 @@ body {
   /* .item-house__link */
   /* .item-house__info */
 }
+.item-house__image {
+  cursor: pointer;
+  border-radius: 0.5625rem;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  aspect-ratio: 560/440;
+}
+.item-house__image img {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.item-house__name {
+  color: #fff;
+  border-radius: 2.5rem 0 0 0rem;
+  padding: 1.625rem 2.0625rem 1.3125rem 2.0625rem;
+  background: #242529;
+  position: relative;
+  z-index: 10;
+}
+.item-house__body {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+.item-house__about {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  max-width: 10.375rem;
+  line-height: 121.429%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.item-house__link {
+  font-weight: 700;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.75rem;
+  transition: all 0.4s;
+}
+.item-house__link::before {
+  font-size: 1.4375rem;
+  font-weight: 400;
+}
+.item-house__info {
+  max-width: 16.25rem;
+  width: 100%;
+}
+.item-house__info li {
+  font-size: 0.75rem;
+  padding: 0.625rem 0;
+  border-bottom: 0.0625rem solid #d9d9d9;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.item-house__info b {
+  font-weight: 700;
+  line-height: 116.667%;
+}
+.item-house__info span {
+  color: #c6d20c;
+  text-align: right;
+  line-height: 116.667%;
+}
 @media (max-width: 113.125em){
   .hero__button {
     margin-top: 0.3125rem;
@@ -600,6 +698,11 @@ body {
 }
 @media (max-width: 100em){
   .item-stage__content {
+    margin-right: 6.25e-8rem;
+  }
+}
+@media (max-width: 92.56125em){
+  .stages__text {
     margin-right: 6.25e-8rem;
   }
 }
@@ -612,6 +715,25 @@ body {
 @media (max-width: 75em){
   .item-about {
     padding: 0.9375rem;
+  }
+  .houses__text {
+    max-width: 26.25rem;
+  }
+  .houses__items {
+    overflow: auto;
+  }
+  .item-house {
+    flex: 0 0 25rem;
+  }
+}
+@media (max-width: 61.99875em) and (min-width: 113.125em){
+  .stages__title {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 61.99875em) and (max-width: 20em){
+  .stages__title {
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 61.99875em){
@@ -627,8 +749,17 @@ body {
   .item-about.active {
     flex: 0 1 42%;
   }
+  .stages__content {
+    flex-direction: column;
+  }
+  .stages__title {
+    width: 100%;
+  }
   .item-stage {
     flex-direction: column-reverse;
+  }
+  .houses__text {
+    max-width: 22.5rem;
   }
 }
 @media (max-width: 47.99875em) and (min-width: 47.99875em){
@@ -786,15 +917,45 @@ body {
   .item-stage__title {
     margin-bottom: 0.75rem;
   }
+  .houses__content {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .houses__title {
+    max-width: none;
+  }
+  .houses__text {
+    max-width: none;
+    padding-bottom: 0;
+  }
+  .item-house {
+    flex: 0 0 21.875rem;
+  }
+  .item-house__name {
+    border-radius: 1.6875rem 0 0 0rem;
+    padding: 0.75rem 1.25rem 0.6875rem 1.5rem;
+  }
+  .item-house__info li {
+    font-size: 0.6875rem;
+  }
+  .item-house__info li {
+    padding: 0.5rem 0;
+  }
 }
 @media (max-width: 30.06125em){
   .item-stage {
     gap: 1.5625rem;
   }
+  .houses__items {
+    column-gap: 0.75rem;
+  }
 }
 @media (max-width: 29.99875em){
   .menu__link {
     padding-bottom: 1.5625rem;
+  }
+  .item-house__about {
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 26.25em){
@@ -807,11 +968,19 @@ body {
   .item-stage__image {
     aspect-ratio: 566/225;
   }
+  .item-house {
+    flex: 0 0 18.75rem;
+  }
 }
 @media (max-width: 23.75em){
   .item-about {
     min-width: 16.875rem;
     padding: 0.625rem;
+  }
+}
+@media (max-width: 21.875em){
+  .item-house {
+    flex: 0 0 16.875rem;
   }
 }
 @media (max-width: 20em){
@@ -854,14 +1023,8 @@ body {
   .stages__content {
     padding-bottom: 2.5rem;
   }
-  .stages__title {
-    font-size: 2.5rem;
-  }
   .stages__text {
     font-size: 1.25rem;
-  }
-  .stages__text {
-    margin-right: 6.25e-8rem;
   }
   .stages__text {
     margin-bottom: 1.25rem;
@@ -875,6 +1038,27 @@ body {
   .item-stage__text {
     font-size: 0.9375rem;
   }
+  .houses {
+    padding-top: 2.5rem;
+  }
+  .houses {
+    padding-bottom: 2.5rem;
+  }
+  .houses__content {
+    margin-bottom: 1.875rem;
+  }
+  .houses__items {
+    row-gap: 2.1875rem;
+  }
+  .item-house__image {
+    margin-bottom: 1.25rem;
+  }
+  .item-house__name {
+    font-size: 1.25rem;
+  }
+  .item-house__text {
+    margin-bottom: 0.9375rem;
+  }
 }
 @media (max-width: 47.99875em) and (min-width: 20em) and (max-width: 47.99875em){
   .menu__link {
@@ -882,6 +1066,11 @@ body {
   }
   .hero__title {
     font-size: clamp( 3.3125rem , 0.0980707844125rem  +  16.0721460779vw , 7.8125rem );
+  }
+}
+@media (max-width: 61.99875em) and (min-width: 20em) and (max-width: 113.125em){
+  .stages__title {
+    font-size: clamp( 2.5rem , 2.07046979865625rem  +  2.1476510067vw , 4.5rem );
   }
 }
 @media (min-width: 20em) and (max-width: 113.125em){
@@ -924,14 +1113,8 @@ body {
   .stages__content {
     padding-bottom: clamp( 2.5rem , 2.1510067114125rem  +  1.744966443vw , 4.125rem );
   }
-  .stages__title {
-    font-size: clamp( 2.5rem , 2.07046979865625rem  +  2.1476510067vw , 4.5rem );
-  }
   .stages__text {
     font-size: clamp( 1.25rem , 1.19630872483125rem  +  0.2684563758vw , 1.5rem );
-  }
-  .stages__text {
-    margin-right: clamp( 6.25e-8rem , -2.99328851468125rem  +  14.9664428859vw , 13.9375rem );
   }
   .stages__text {
     margin-bottom: clamp( 1.25rem , 0.9010067114125rem  +  1.744966443vw , 2.875rem );
@@ -945,10 +1128,34 @@ body {
   .item-stage__text {
     font-size: clamp( 0.9375rem , 0.8703859060375rem  +  0.3355704698vw , 1.25rem );
   }
+  .houses {
+    padding-top: clamp( 2.5rem , 2.07046979865625rem  +  2.1476510067vw , 4.5rem );
+  }
+  .houses {
+    padding-bottom: clamp( 2.5rem , 1.88255033556875rem  +  3.0872483221vw , 5.375rem );
+  }
+  .houses__content {
+    margin-bottom: clamp( 1.875rem , 1.5394295302rem  +  1.677852349vw , 3.4375rem );
+  }
+  .houses__items {
+    row-gap: clamp( 2.1875rem , 1.71770134228125rem  +  2.3489932886vw , 4.375rem );
+  }
+  .item-house__image {
+    margin-bottom: clamp( 1.25rem , 1.04865771811875rem  +  1.0067114094vw , 2.1875rem );
+  }
+  .item-house__name {
+    font-size: clamp( 1.25rem , 1.08892617449375rem  +  0.8053691275vw , 2rem );
+  }
+  .item-house__text {
+    margin-bottom: clamp( 0.9375rem , 0.816694630875rem  +  0.6040268456vw , 1.5rem );
+  }
 }
 @media (min-width: 30.06125em) and (max-width: 111.25em){
   .item-stage {
     gap: clamp( 1.5625rem , 0.52113323890625rem  +  3.4641498976vw , 4.375rem );
+  }
+  .houses__items {
+    column-gap: clamp( 0.75rem , 0.1020384597625rem  +  2.1554710474vw , 2.5rem );
   }
 }
 @media (min-width: 47.99875em) and (min-width: 47.99875em) and (max-width: 113.125em){
@@ -973,6 +1180,11 @@ body {
     padding-bottom: clamp( 1.875rem , 0.45214027390625rem  +  2.9643682931vw , 3.75rem );
   }
 }
+@media (min-width: 47.99875em) and (min-width: 20em) and (max-width: 113.125em){
+  .houses__title {
+    max-width: clamp( 28.125rem , 24.8498322147625rem  +  16.3758389262vw , 43.375rem );
+  }
+}
 @media (min-width: 47.99875em) and (min-width: 113.125em){
   .menu__item:not(:last-child) {
     padding-right: 4.375rem;
@@ -985,6 +1197,9 @@ body {
   }
   .header__logo {
     margin-left: 3.5rem;
+  }
+  .houses__title {
+    max-width: 43.375rem;
   }
 }
 @media (min-width: 47.99875em) and (min-width: 111.25em){
@@ -1015,6 +1230,11 @@ body {
     margin-left: 1.25rem;
   }
 }
+@media (min-width: 47.99875em) and (max-width: 20em){
+  .houses__title {
+    max-width: 28.125rem;
+  }
+}
 @media (min-width: 47.99875em) and (max-width: 111.25em){
   .hero__title {
     font-size: clamp( 8.125rem , 4.80499397245rem  +  6.9168593506vw , 12.5rem );
@@ -1031,6 +1251,11 @@ body {
     margin-top: -0.25rem;
   }
 }
+@media (min-width: 61.99875em) and (min-width: 61.99875em) and (max-width: 111.25em){
+  .stages__title {
+    max-width: clamp( 21.875rem , -3.3801949823625rem  +  40.7350067257vw , 41.9375rem );
+  }
+}
 @media (min-width: 61.99875em) and (min-width: 20em) and (max-width: 113.125em){
   .item-stage__image {
     max-width: clamp( 18.75rem , 15.17953020134375rem  +  17.8523489933vw , 35.375rem );
@@ -1041,9 +1266,44 @@ body {
     max-width: 35.375rem;
   }
 }
+@media (min-width: 61.99875em) and (min-width: 111.25em){
+  .stages__title {
+    max-width: 41.9375rem;
+  }
+}
+@media (min-width: 61.99875em) and (max-width: 61.99875em){
+  .stages__title {
+    max-width: 21.875rem;
+  }
+}
 @media (min-width: 61.99875em) and (max-width: 20em){
   .item-stage__image {
     max-width: 18.75rem;
+  }
+}
+@media (min-width: 61.99875em){
+  .stages__text {
+    max-width: 33.75rem;
+  }
+}
+@media (min-width: 75em) and (min-width: 20em) and (max-width: 113.125em){
+  .houses__text {
+    max-width: clamp( 28.125rem , 26.89010067114375rem  +  6.1744966443vw , 33.875rem );
+  }
+}
+@media (min-width: 75em) and (min-width: 113.125em){
+  .houses__text {
+    max-width: 33.875rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 20em){
+  .houses__text {
+    max-width: 28.125rem;
+  }
+}
+@media (min-width: 92.56125em) and (max-width: 111.25em){
+  .stages__text {
+    margin-right: clamp( 6.25e-8rem , -69.02935803206876rem  +  74.5769510401vw , 13.9375rem );
   }
 }
 @media (min-width: 100em) and (max-width: 111.25em){
@@ -1054,6 +1314,9 @@ body {
 @media (min-width: 111.25em){
   .hero__title {
     font-size: 12.5rem;
+  }
+  .stages__text {
+    margin-right: 13.9375rem;
   }
   .item-stage {
     gap: 4.375rem;
@@ -1066,6 +1329,9 @@ body {
   }
   .item-stage__title {
     margin-bottom: 1.3125rem;
+  }
+  .houses__items {
+    column-gap: 2.5rem;
   }
 }
 @media (min-width: 113.125em){
@@ -1108,14 +1374,8 @@ body {
   .stages__content {
     padding-bottom: 4.125rem;
   }
-  .stages__title {
-    font-size: 4.5rem;
-  }
   .stages__text {
     font-size: 1.5rem;
-  }
-  .stages__text {
-    margin-right: 13.9375rem;
   }
   .stages__text {
     margin-bottom: 2.875rem;
@@ -1128,6 +1388,27 @@ body {
   }
   .item-stage__text {
     font-size: 1.25rem;
+  }
+  .houses {
+    padding-top: 4.5rem;
+  }
+  .houses {
+    padding-bottom: 5.375rem;
+  }
+  .houses__content {
+    margin-bottom: 3.4375rem;
+  }
+  .houses__items {
+    row-gap: 4.375rem;
+  }
+  .item-house__image {
+    margin-bottom: 2.1875rem;
+  }
+  .item-house__name {
+    font-size: 2rem;
+  }
+  .item-house__text {
+    margin-bottom: 1.5rem;
   }
 }
 @media (any-hover: hover){
@@ -1150,6 +1431,12 @@ body {
     opacity: 0.65;
   }
   .item-stage:hover .item-stage__number {
-    color: #83A1AC;
+    color: #83a1ac;
+  }
+  .item-house__image:hover img {
+    transform: scale(1.03);
+  }
+  .item-house__link:hover {
+    color: #c6d20c;
   }
 }
