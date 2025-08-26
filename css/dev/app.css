@@ -149,6 +149,7 @@ body {
   padding: 0.3125rem 0.5rem 0.3125rem 1.25rem;
 }
 .label {
+  margin-bottom: 0.4375rem;
   display: inline-flex;
   border-radius: 2.5rem;
   gap: 0.4375rem;
@@ -677,6 +678,9 @@ body {
   .button {
     font-size: 0.875rem;
   }
+  .label {
+    font-size: 0.875rem;
+  }
   .title {
     font-size: 2rem;
   }
@@ -707,6 +711,9 @@ body {
 @media (min-width: 20em) and (max-width: 113.125em){
   .button {
     font-size: clamp( 0.875rem , 0.86157718120625rem  +  0.067114094vw , 0.9375rem );
+  }
+  .label {
+    font-size: clamp( 0.875rem , 0.84815436241875rem  +  0.1342281879vw , 1rem );
   }
   .title {
     font-size: clamp( 2rem , 1.57046979865625rem  +  2.1476510067vw , 4rem );
@@ -809,6 +816,9 @@ body {
 @media (min-width: 113.125em){
   .button {
     font-size: 0.9375rem;
+  }
+  .label {
+    font-size: 1rem;
   }
   .title {
     font-size: 4rem;
