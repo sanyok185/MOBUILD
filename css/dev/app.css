@@ -135,10 +135,10 @@ body {
   min-width: 0;
 }
 [class*=__container] {
-  max-width: 113.75rem;
+  max-width: 113.25rem;
   margin: 0 auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .button {
   justify-content: space-between;
@@ -1107,7 +1107,7 @@ textarea.input {
   height: 1.6875rem;
   font-size: 1rem;
 }
-@media (max-width: 113.75em){
+@media (max-width: 113.25em){
   .hero__button {
     margin-top: 0.3125rem;
   }
@@ -1142,7 +1142,7 @@ textarea.input {
     flex: 0 0 25rem;
   }
 }
-@media (max-width: 61.99875em) and (min-width: 113.75em){
+@media (max-width: 61.99875em) and (min-width: 113.25em){
   .stages__title {
     font-size: 4.5rem;
   }
@@ -1408,7 +1408,7 @@ textarea.input {
     flex-direction: column;
     gap: 0.9375rem;
   }
-  .delivery__images img:nth-child(2) {
+  .delivery__image--2 {
     display: none;
   }
   .consultation__body img {
@@ -1633,7 +1633,7 @@ textarea.input {
   .delivery__text {
     font-size: 1.0625rem;
   }
-  .delivery__images img:nth-child(2) {
+  .delivery__image--2 {
     width: 12.5rem;
   }
   .faq {
@@ -1681,188 +1681,188 @@ textarea.input {
     font-size: clamp( 3.3125rem , 0.0980707844125rem  +  16.0721460779vw , 7.8125rem );
   }
 }
-@media (max-width: 61.99875em) and (min-width: 20em) and (max-width: 113.75em){
+@media (max-width: 61.99875em) and (min-width: 20em) and (max-width: 113.25em){
   .stages__title {
-    font-size: clamp( 2rem , 1.46666666666875rem  +  2.6666666667vw , 4.5rem );
+    font-size: clamp( 2rem , 1.4638069705125rem  +  2.6809651475vw , 4.5rem );
   }
 }
-@media (min-width: 20em) and (max-width: 113.75em){
+@media (min-width: 20em) and (max-width: 113.25em){
   .button {
-    font-size: clamp( 0.875rem , 0.84833333333125rem  +  0.1333333333vw , 1rem );
+    font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
   }
   .label {
-    font-size: clamp( 0.875rem , 0.84833333333125rem  +  0.1333333333vw , 1rem );
+    font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
   }
   .title {
-    font-size: clamp( 2rem , 1.57333333333125rem  +  2.1333333333vw , 4rem );
+    font-size: clamp( 2rem , 1.57104557640625rem  +  2.144772118vw , 4rem );
   }
   .text {
-    font-size: clamp( 0.875rem , 0.84833333333125rem  +  0.1333333333vw , 1rem );
+    font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
   }
   .spollers__title {
-    font-size: clamp( 1rem , 0.94666666666875rem  +  0.2666666667vw , 1.25rem );
+    font-size: clamp( 1rem , 0.94638069705rem  +  0.2680965147vw , 1.25rem );
   }
   .footer__info {
-    margin-bottom: clamp( 2.5rem , 0.68666666666875rem  +  9.0666666667vw , 11rem );
+    margin-bottom: clamp( 2.5rem , 0.67694369973125rem  +  9.1152815013vw , 11rem );
   }
   .footer__contacts {
-    gap: clamp( 0.625rem , 0.57166666666875rem  +  0.2666666667vw , 0.875rem );
+    gap: clamp( 0.625rem , 0.57138069705rem  +  0.2680965147vw , 0.875rem );
   }
   .footer__contact {
-    font-size: clamp( 1rem , 0.94666666666875rem  +  0.2666666667vw , 1.25rem );
+    font-size: clamp( 1rem , 0.94638069705rem  +  0.2680965147vw , 1.25rem );
   }
   .footer__contact--email {
-    font-size: clamp( 1.625rem , 1.43833333333125rem  +  0.9333333333vw , 2.5rem );
+    font-size: clamp( 1.625rem , 1.43733243968125rem  +  0.9383378016vw , 2.5rem );
   }
   .footer__label {
-    font-size: clamp( 0.875rem , 0.84833333333125rem  +  0.1333333333vw , 1rem );
+    font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
   }
   .footer__list {
-    gap: clamp( 0.75rem , 0.60333333333125rem  +  0.7333333333vw , 1.4375rem );
+    gap: clamp( 0.75rem , 0.6025469168875rem  +  0.7372654155vw , 1.4375rem );
   }
   .footer__link {
-    font-size: clamp( 0.875rem , 0.84833333333125rem  +  0.1333333333vw , 1rem );
+    font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
   }
   .footer__social {
-    gap: clamp( 0.5rem , 0.46rem  +  0.2vw , 0.6875rem );
+    gap: clamp( 0.5rem , 0.4597855227875rem  +  0.2010723861vw , 0.6875rem );
   }
   .footer__social a {
-    width: clamp( 1.5rem , 1.40666666666875rem  +  0.4666666667vw , 1.9375rem );
+    width: clamp( 1.5rem , 1.4061662198375rem  +  0.4691689008vw , 1.9375rem );
   }
   .footer__logo {
-    margin-top: clamp( 3.125rem , 0.99166666666875rem  +  10.6666666667vw , 13.125rem );
+    margin-top: clamp( 3.125rem , 0.9802278820375rem  +  10.7238605898vw , 13.125rem );
   }
   .footer__logo {
-    font-size: clamp( 3.125rem , 0.05833333333125rem  +  15.3333333333vw , 17.5rem );
+    font-size: clamp( 3.125rem , 0.04189008043125rem  +  15.4155495979vw , 17.5rem );
   }
   .footer__logo {
-    letter-spacing: clamp( -0.875rem , 0.035rem  +  -0.8vw , -0.125rem );
+    letter-spacing: clamp( -0.875rem , 0.03585790885rem  +  -0.8042895442vw , -0.125rem );
   }
   .footer__copy {
-    margin-top: clamp( 3.125rem , 0.89833333333125rem  +  11.1333333333vw , 13.5625rem );
+    margin-top: clamp( 3.125rem , 0.886394101875rem  +  11.1930294906vw , 13.5625rem );
   }
   .checkbox__text span {
-    margin-left: clamp( 0.3125rem , 0.16583333333125rem  +  0.7333333333vw , 1rem );
+    margin-left: clamp( 0.3125rem , 0.1650469168875rem  +  0.7372654155vw , 1rem );
   }
   .hero__text {
-    font-size: clamp( 0.8125rem , 0.79916666666875rem  +  0.0666666667vw , 0.875rem );
+    font-size: clamp( 0.8125rem , 0.7990951742625rem  +  0.0670241287vw , 0.875rem );
   }
   .hero__button {
-    font-size: clamp( 0.875rem , 0.86166666666875rem  +  0.0666666667vw , 0.9375rem );
+    font-size: clamp( 0.875rem , 0.8615951742625rem  +  0.0670241287vw , 0.9375rem );
   }
   .about {
-    padding-top: clamp( 3.125rem , 2.79166666666875rem  +  1.6666666667vw , 4.6875rem );
+    padding-top: clamp( 3.125rem , 2.78987935656875rem  +  1.6756032172vw , 4.6875rem );
   }
   .about__content {
-    margin-bottom: clamp( 1.875rem , 1.52833333333125rem  +  1.7333333333vw , 3.5rem );
+    margin-bottom: clamp( 1.875rem , 1.52647453083125rem  +  1.7426273458vw , 3.5rem );
   }
   .item-about__name {
-    font-size: clamp( 1.25rem , 1.19666666666875rem  +  0.2666666667vw , 1.5rem );
+    font-size: clamp( 1.25rem , 1.19638069705rem  +  0.2680965147vw , 1.5rem );
   }
   .item-about__text {
-    font-size: clamp( 0.75rem , 0.72333333333125rem  +  0.1333333333vw , 0.875rem );
+    font-size: clamp( 0.75rem , 0.723190348525rem  +  0.1340482574vw , 0.875rem );
   }
   .stages__body {
-    padding-top: clamp( 2.5rem , 2.42rem  +  0.4vw , 2.875rem );
+    padding-top: clamp( 2.5rem , 2.419571045575rem  +  0.4021447721vw , 2.875rem );
   }
   .stages__body {
-    padding-bottom: clamp( 2.5rem , 2.18rem  +  1.6vw , 4rem );
+    padding-bottom: clamp( 2.5rem , 2.17828418230625rem  +  1.6085790885vw , 4rem );
   }
   .stages__content {
-    padding-bottom: clamp( 2.5rem , 2.15333333333125rem  +  1.7333333333vw , 4.125rem );
+    padding-bottom: clamp( 2.5rem , 2.15147453083125rem  +  1.7426273458vw , 4.125rem );
   }
   .stages__text {
-    font-size: clamp( 1.25rem , 1.19666666666875rem  +  0.2666666667vw , 1.5rem );
+    font-size: clamp( 1.25rem , 1.19638069705rem  +  0.2680965147vw , 1.5rem );
   }
   .stages__text {
-    margin-bottom: clamp( 1.25rem , 0.90333333333125rem  +  1.7333333333vw , 2.875rem );
+    margin-bottom: clamp( 1.25rem , 0.90147453083125rem  +  1.7426273458vw , 2.875rem );
   }
   .item-stage__number {
-    font-size: clamp( 3.75rem , 2.84333333333125rem  +  4.5333333333vw , 8rem );
+    font-size: clamp( 3.75rem , 2.83847184986875rem  +  4.5576407507vw , 8rem );
   }
   .item-stage__title {
-    font-size: clamp( 1.25rem , 1.19666666666875rem  +  0.2666666667vw , 1.5rem );
+    font-size: clamp( 1.25rem , 1.19638069705rem  +  0.2680965147vw , 1.5rem );
   }
   .item-stage__text {
-    font-size: clamp( 0.9375rem , 0.87083333333125rem  +  0.3333333333vw , 1.25rem );
+    font-size: clamp( 0.9375rem , 0.8704758713125rem  +  0.3351206434vw , 1.25rem );
   }
   .houses {
-    padding-top: clamp( 2.5rem , 2.07333333333125rem  +  2.1333333333vw , 4.5rem );
+    padding-top: clamp( 2.5rem , 2.07104557640625rem  +  2.144772118vw , 4.5rem );
   }
   .houses {
-    padding-bottom: clamp( 2.5rem , 1.88666666666875rem  +  3.0666666667vw , 5.375rem );
+    padding-bottom: clamp( 2.5rem , 1.8833780160875rem  +  3.0831099196vw , 5.375rem );
   }
   .houses__content {
-    margin-bottom: clamp( 1.875rem , 1.54166666666875rem  +  1.6666666667vw , 3.4375rem );
+    margin-bottom: clamp( 1.875rem , 1.53987935656875rem  +  1.6756032172vw , 3.4375rem );
   }
   .houses__cards {
-    gap: clamp( 1.875rem , 1.32833333333125rem  +  2.7333333333vw , 4.4375rem );
+    gap: clamp( 1.875rem , 1.325402144775rem  +  2.7479892761vw , 4.4375rem );
   }
   .houses__items {
-    row-gap: clamp( 2.1875rem , 1.72083333333125rem  +  2.3333333333vw , 4.375rem );
+    row-gap: clamp( 2.1875rem , 1.71833109919375rem  +  2.345844504vw , 4.375rem );
   }
   .item-house__image {
-    margin-bottom: clamp( 1.25rem , 1.05rem  +  1vw , 2.1875rem );
+    margin-bottom: clamp( 1.25rem , 1.04892761394375rem  +  1.0053619303vw , 2.1875rem );
   }
   .item-house__name {
-    font-size: clamp( 1.25rem , 1.09rem  +  0.8vw , 2rem );
+    font-size: clamp( 1.25rem , 1.08914209115rem  +  0.8042895442vw , 2rem );
   }
   .item-house__text {
-    margin-bottom: clamp( 0.9375rem , 0.8175rem  +  0.6vw , 1.5rem );
+    margin-bottom: clamp( 0.9375rem , 0.8168565683625rem  +  0.6032171582vw , 1.5rem );
   }
   .delivery__body {
-    padding-top: clamp( 2.5rem , 2.42rem  +  0.4vw , 2.875rem );
+    padding-top: clamp( 2.5rem , 2.419571045575rem  +  0.4021447721vw , 2.875rem );
   }
   .delivery__button {
-    font-size: clamp( 1rem , 0.97333333333125rem  +  0.1333333333vw , 1.125rem );
+    font-size: clamp( 1rem , 0.973190348525rem  +  0.1340482574vw , 1.125rem );
   }
   .delivery__title {
-    font-size: clamp( 2rem , 1.46666666666875rem  +  2.6666666667vw , 4.5rem );
+    font-size: clamp( 2rem , 1.4638069705125rem  +  2.6809651475vw , 4.5rem );
   }
   .delivery__block {
-    gap: clamp( 1.25rem , 0.71666666666875rem  +  2.6666666667vw , 3.75rem );
+    gap: clamp( 1.25rem , 0.7138069705125rem  +  2.6809651475vw , 3.75rem );
   }
   .delivery__text {
-    font-size: clamp( 1.0625rem , 0.96916666666875rem  +  0.4666666667vw , 1.5rem );
+    font-size: clamp( 1.0625rem , 0.9686662198375rem  +  0.4691689008vw , 1.5rem );
   }
-  .delivery__images img:nth-child(2) {
-    width: clamp( 12.5rem , 9.14rem  +  16.8vw , 28.25rem );
-  }
-  .faq {
-    padding-top: clamp( 2.5rem , 1.96666666666875rem  +  2.6666666667vw , 5rem );
+  .delivery__image--2 {
+    width: clamp( 12.5rem , 8.74664879356875rem  +  18.7667560322vw , 30rem );
   }
   .faq {
-    padding-bottom: clamp( 2.5rem , 1.96666666666875rem  +  2.6666666667vw , 5rem );
+    padding-top: clamp( 2.5rem , 1.9638069705125rem  +  2.6809651475vw , 5rem );
+  }
+  .faq {
+    padding-bottom: clamp( 2.5rem , 1.9638069705125rem  +  2.6809651475vw , 5rem );
   }
   .faq__title {
-    margin-bottom: clamp( 0.9375rem , 0.83083333333125rem  +  0.5333333333vw , 1.4375rem );
+    margin-bottom: clamp( 0.9375rem , 0.8302613941rem  +  0.5361930295vw , 1.4375rem );
   }
   .consultation {
-    padding-bottom: clamp( 2.5rem , 1.95333333333125rem  +  2.7333333333vw , 5.0625rem );
+    padding-bottom: clamp( 2.5rem , 1.950402144775rem  +  2.7479892761vw , 5.0625rem );
   }
   .consultation__body {
-    padding-top: clamp( 2.3125rem , 1.96583333333125rem  +  1.7333333333vw , 3.9375rem );
+    padding-top: clamp( 2.3125rem , 1.96397453083125rem  +  1.7426273458vw , 3.9375rem );
   }
   .consultation__body {
-    padding-bottom: clamp( 2.5rem , 1.94rem  +  2.8vw , 5.125rem );
+    padding-bottom: clamp( 2.5rem , 1.9369973190375rem  +  2.8150134048vw , 5.125rem );
   }
   .consultation__body {
-    gap: clamp( 1.25rem , 1.11666666666875rem  +  0.6666666667vw , 1.875rem );
+    gap: clamp( 1.25rem , 1.115951742625rem  +  0.6702412869vw , 1.875rem );
   }
   .consultation__subtitle {
-    font-size: clamp( 1.25rem , 1.13rem  +  0.6vw , 1.8125rem );
+    font-size: clamp( 1.25rem , 1.1293565683625rem  +  0.6032171582vw , 1.8125rem );
   }
   .form__inputs {
-    margin-bottom: clamp( 1.25rem , 1.11666666666875rem  +  0.6666666667vw , 1.875rem );
+    margin-bottom: clamp( 1.25rem , 1.115951742625rem  +  0.6702412869vw , 1.875rem );
   }
   .form__checkbox {
-    margin-top: clamp( 0.9375rem , 0.80416666666875rem  +  0.6666666667vw , 1.5625rem );
+    margin-top: clamp( 0.9375rem , 0.803451742625rem  +  0.6702412869vw , 1.5625rem );
   }
   .form__button {
-    margin-top: clamp( 0.9375rem , 0.87083333333125rem  +  0.3333333333vw , 1.25rem );
+    margin-top: clamp( 0.9375rem , 0.8704758713125rem  +  0.3351206434vw , 1.25rem );
   }
   .form__button {
-    font-size: clamp( 0.875rem , 0.86166666666875rem  +  0.0666666667vw , 0.9375rem );
+    font-size: clamp( 0.875rem , 0.8615951742625rem  +  0.0670241287vw , 0.9375rem );
   }
 }
 @media (min-width: 30.06125em) and (max-width: 111.25em){
@@ -1898,19 +1898,19 @@ textarea.input {
     padding-bottom: clamp( 1.875rem , 0.45214027390625rem  +  2.9643682931vw , 3.75rem );
   }
 }
-@media (min-width: 47.99875em) and (min-width: 20em) and (max-width: 113.75em){
+@media (min-width: 47.99875em) and (min-width: 20em) and (max-width: 113.25em){
   .houses__title {
-    max-width: clamp( 28.125rem , 24.87166666666875rem  +  16.2666666667vw , 43.375rem );
+    max-width: clamp( 28.125rem , 24.85422252010625rem  +  16.3538873995vw , 43.375rem );
   }
-  .delivery__images img:nth-child(1) {
-    width: clamp( 20rem , 10.06666666666875rem  +  49.6666666667vw , 66.5625rem );
+  .delivery__image--1 {
+    width: clamp( 20rem , 10.0134048257375rem  +  49.9329758713vw , 66.5625rem );
   }
 }
-@media (min-width: 47.99875em) and (min-width: 113.75em){
+@media (min-width: 47.99875em) and (min-width: 113.25em){
   .houses__title {
     max-width: 43.375rem;
   }
-  .delivery__images img:nth-child(1) {
+  .delivery__image--1 {
     width: 66.5625rem;
   }
 }
@@ -1966,7 +1966,7 @@ textarea.input {
   .houses__title {
     max-width: 28.125rem;
   }
-  .delivery__images img:nth-child(1) {
+  .delivery__image--1 {
     width: 20rem;
   }
 }
@@ -2006,18 +2006,18 @@ textarea.input {
     max-width: clamp( 21.875rem , -3.3801949823625rem  +  40.7350067257vw , 41.9375rem );
   }
 }
-@media (min-width: 61.99875em) and (min-width: 20em) and (max-width: 113.75em){
+@media (min-width: 61.99875em) and (min-width: 20em) and (max-width: 113.25em){
   .item-stage__image {
-    max-width: clamp( 18.75rem , 15.20333333333125rem  +  17.7333333333vw , 35.375rem );
+    max-width: clamp( 18.75rem , 15.1843163538875rem  +  17.8284182306vw , 35.375rem );
   }
   .faq__container {
-    gap: clamp( 1.875rem , 1.60833333333125rem  +  1.3333333333vw , 3.125rem );
+    gap: clamp( 1.875rem , 1.60690348525625rem  +  1.3404825737vw , 3.125rem );
   }
   .faq__spollers {
-    max-width: clamp( 25rem , 22.33333333333125rem  +  13.3333333333vw , 37.5rem );
+    max-width: clamp( 25rem , 22.31903485255rem  +  13.4048257373vw , 37.5rem );
   }
 }
-@media (min-width: 61.99875em) and (min-width: 113.75em){
+@media (min-width: 61.99875em) and (min-width: 113.25em){
   .item-stage__image {
     max-width: 35.375rem;
   }
@@ -2078,12 +2078,12 @@ textarea.input {
     text-align: right;
   }
 }
-@media (min-width: 75em) and (min-width: 20em) and (max-width: 113.75em){
+@media (min-width: 75em) and (min-width: 20em) and (max-width: 113.25em){
   .houses__text {
-    max-width: clamp( 28.125rem , 26.89833333333125rem  +  6.1333333333vw , 33.875rem );
+    max-width: clamp( 28.125rem , 26.89175603216875rem  +  6.1662198391vw , 33.875rem );
   }
 }
-@media (min-width: 75em) and (min-width: 113.75em){
+@media (min-width: 75em) and (min-width: 113.25em){
   .houses__text {
     max-width: 33.875rem;
   }
@@ -2140,7 +2140,7 @@ textarea.input {
     padding-right: 15.0625rem;
   }
 }
-@media (min-width: 113.75em){
+@media (min-width: 113.25em){
   .button {
     font-size: 1rem;
   }
@@ -2282,8 +2282,8 @@ textarea.input {
   .delivery__images {
     padding-left: 2rem;
   }
-  .delivery__images img:nth-child(2) {
-    width: 28.25rem;
+  .delivery__image--2 {
+    width: 30rem;
   }
   .faq {
     padding-top: 5rem;
