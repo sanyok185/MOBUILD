@@ -9,8 +9,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="img/favicon/site.webmanifest">
 		<title>MODBUILD</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1756298347523"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1756298347523">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1756387632052"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1756387632052">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756387632052">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -26,10 +28,10 @@
 									<a href="." class="menu__link menu__link--active">Головна</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Технологія</a>
+									<a href="technology.html" class="menu__link">Технологія</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Наші Роботи</a>
+									<a href="index.html#houses" class="menu__link">Наші Роботи</a>
 								</li>
 							</ul>
 							<div class="header__logo" data-fls-dynamic=".header__container, 768">
@@ -37,13 +39,13 @@
 							</div>
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="#" class="menu__link">Етапи Виробництва</a>
+									<a href="index.html#stages" class="menu__link">Етапи Виробництва</a>
 								</li>
 								<li class="menu__item">
-									<a href="about.html" class="menu__link">Про Нас</a>
+									<a href="index.html#about" class="menu__link">Про Нас</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Контакти</a>
+									<a href="contact.html" class="menu__link">Контакти</a>
 								</li>
 							</ul>
 						</nav>
@@ -61,7 +63,7 @@
 						час та заробляє гроші.
 								</p>
 							</div>
-							<button type="button" class="hero__button button button--light --icon-arrow">КОНСУЛЬТАЦІЯ</button>
+							<button data-fls-popup-link="popup" type="button" class="hero__button button button--light --icon-arrow">КОНСУЛЬТАЦІЯ</button>
 						</div>
 						<div data-fls-slider="" class="hero__slider swiper">
 							<div class="hero__wrapper swiper-wrapper">
@@ -279,7 +281,7 @@
 							</div>
 						</div>
 						<div class="houses__cards">
-							<div class="houses__items">
+							<div class="houses__items houses__items--1">
 								<article class="houses__item item-house">
 									<a href="" class="item-house__image">
 										<picture>
@@ -392,7 +394,7 @@
 									</div>
 								</article>
 							</div>
-							<div class="houses__items">
+							<div class="houses__items houses__items--2">
 								<article class="houses__item item-house">
 									<a href="" class="item-house__image">
 										<picture>
@@ -636,19 +638,19 @@
 									<a href="." class="footer__link">Головна</a>
 								</li>
 								<li class="footer__item">
-									<a href="#" class="footer__link">Етапи</a>
+									<a href="index.html#stages" class="footer__link">Етапи</a>
 								</li>
 								<li class="footer__item">
-									<a href="#" class="footer__link">Наші Роботи</a>
+									<a href="index.html#houses" class="footer__link">Наші Роботи</a>
 								</li>
 								<li class="footer__item">
-									<a href="#" class="footer__link">Технологія</a>
+									<a href="technology.html" class="footer__link">Технологія</a>
 								</li>
 								<li class="footer__item">
-									<a href="about.html" class="footer__link">Про Нас</a>
+									<a href="index.html#about" class="footer__link">Про Нас</a>
 								</li>
 								<li class="footer__item">
-									<a href="#" class="footer__link">Контакти</a>
+									<a href="contact.html" class="footer__link">Контакти</a>
 								</li>
 							</ul>
 						</nav>
@@ -680,10 +682,64 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__logo">MODBUILD</div>
+					<div class="footer__logo">
+						<img src="./assets/img/logo-big.svg" alt="Image">
+					</div>
 					<div class="footer__copy">@2025 MODBUILD</div>
 				</div>
 			</footer>
 		</div>
 	</body>
+	<div data-fls-popup="popup" aria-hidden="true" class="popup">
+		<div data-fls-popup-wrapper="" class="popup__wrapper">
+			<div data-fls-popup-body="" class="popup__body">
+				<div class="popup__header">
+					<div class="popup__logo">
+						<img src="./assets/img/logo.svg" alt="Logo">
+					</div>
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 15 15" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 15C3.96446 15 2.1967 15 1.09835 13.9016C-8.9407e-08 12.8033 0 11.0355 0 7.5C0 3.96446 -8.9407e-08 2.1967 1.09835 1.09835C2.1967 -8.9407e-08 3.96446 0 7.5 0C11.0355 0 12.8033 -8.9407e-08 13.9016 1.09835C15 2.1967 15 3.96446 15 7.5C15 11.0355 15 12.8033 13.9016 13.9016C12.8033 15 11.0355 15 7.5 15ZM5.22724 5.22725C5.44691 5.00759 5.80307 5.00759 6.02273 5.22725L7.5 6.70455L8.9772 5.22727C9.19687 5.0076 9.55305 5.0076 9.77273 5.22727C9.9924 5.44694 9.9924 5.80309 9.77273 6.02273L8.29545 7.5L9.77273 8.97727C9.9924 9.19687 9.9924 9.55305 9.77273 9.77273C9.55305 9.9924 9.19687 9.9924 8.9772 9.77273L7.5 8.29553L6.02273 9.77273C5.80308 9.9924 5.44692 9.9924 5.22725 9.77273C5.00759 9.55305 5.00759 9.19695 5.22725 8.97727L6.70447 7.5L5.22724 6.02273C5.00757 5.80308 5.00757 5.44692 5.22724 5.22725Z" fill="white"></path>
+						</svg>
+					</button>
+				</div>
+				<div data-fls-popup-content="" class="popup__content">
+					<h2 class="popup__title">Потрібна Допомога ?</h2>
+					<div class="popup__text">Заповнивши форму, наш експерт зв'яжеться з вами за 1 хвилину</div>
+					<form action="" method="POST" class="popup__form form">
+						<input type="text" name="userPhone" data-error="Помилка" placeholder="Вкажіть Номер Телефону" class="popup__input input input--light">
+						<button type="submit" class="popup__button button --icon-arrow">Допомога</button>
+						<ul class="popup__social social">
+							<li>
+								<a href="" target="_blank">
+									<img src="./assets/img/social/fb.svg" alt="Icon">
+								</a>
+							</li>
+							<li>
+								<a href="" target="_blank">
+									<img src="./assets/img/social/insta.svg" alt="Icon">
+								</a>
+							</li>
+							<li>
+								<a href="" target="_blank">
+									<img src="./assets/img/social/tiktok.svg" alt="Icon">
+								</a>
+							</li>
+							<li>
+								<a href="" target="_blank">
+									<img src="./assets/img/social/youtube.svg" alt="Icon">
+								</a>
+							</li>
+						</ul>
+						<label data-fls-checkbox="" class="popup__checkbox checkbox checkbox--light">
+							<input required data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="policy">
+							<span class="checkbox__text">
+								<a href="">Мені не потрібна допомога</a>
+							</span>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </html>
