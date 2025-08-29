@@ -9,10 +9,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="img/favicon/site.webmanifest">
 		<title>MOBUILD</title>
-		<script type="module" crossorigin="" src="./js/contact.min.js?v=1756387632050"></script>
+		<script type="module" crossorigin="" src="./js/contact.min.js?v=1756449078080"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1756387632050">
-		<link rel="stylesheet" crossorigin="" href="./css/contact.min.css?v=1756387632050">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1756449078080">
+		<link rel="stylesheet" crossorigin="" href="./css/contact.min.css?v=1756449078080">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -55,7 +55,7 @@
 			<main class="page page--home">
 				<section class="page__contact contact">
 					<div class="contact__container">
-						<div class="contact__body">
+						<div class="contact__body" data-fls-watcher="" data-fls-watcher-threshold="0.5">
 							<div class="contact__content">
 								<h1 class="contact__title title">Контакти</h1>
 								<div class="contact__info">
@@ -202,7 +202,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__logo">
+					<div class="footer__logo" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2">
 						<img src="./assets/img/logo-big.svg" alt="Image">
 					</div>
 					<div class="footer__copy">@2025 MODBUILD</div>
@@ -226,8 +226,8 @@
 				<div data-fls-popup-content="" class="popup__content">
 					<h2 class="popup__title">Потрібна Допомога ?</h2>
 					<div class="popup__text">Заповнивши форму, наш експерт зв'яжеться з вами за 1 хвилину</div>
-					<form action="" method="POST" class="popup__form form">
-						<input type="text" name="userPhone" data-error="Помилка" placeholder="Вкажіть Номер Телефону" class="popup__input input input--light">
+					<form action="" method="POST" class="popup__form form" data-fls-form="dev">
+						<input required type="text" name="userPhone" data-error="Помилка" placeholder="Вкажіть Номер Телефону" class="popup__input input input--light">
 						<button type="submit" class="popup__button button --icon-arrow">Допомога</button>
 						<ul class="popup__social social">
 							<li>
@@ -253,9 +253,9 @@
 						</ul>
 						<label data-fls-checkbox="" class="popup__checkbox checkbox checkbox--light">
 							<input required data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="policy">
-							<span class="checkbox__text">
-								<a href="">Мені не потрібна допомога</a>
-							</span>
+							<div class="checkbox__text">
+								<button type="button" data-fls-popup-close="">Мені не потрібна допомога</button>
+							</div>
 						</label>
 					</form>
 				</div>

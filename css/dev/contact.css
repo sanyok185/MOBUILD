@@ -11,9 +11,14 @@
   /* .contact__map */
 }
 .contact__body {
+  transition: all 1.2s ease-in-out 0s;
+  opacity: 0;
   display: flex;
   padding: 0 7.8125rem;
   position: relative;
+}
+.contact__body.--watcher-view {
+  opacity: 1;
 }
 .contact__body::before {
   content: "";

@@ -9,10 +9,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="img/favicon/site.webmanifest">
 		<title>MODBUILD</title>
-		<script type="module" crossorigin="" src="./js/technology.min.js?v=1756387632051"></script>
+		<script type="module" crossorigin="" src="./js/technology.min.js?v=1756449078081"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1756387632051">
-		<link rel="stylesheet" crossorigin="" href="./css/technology.min.css?v=1756387632051">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1756449078081">
+		<link rel="stylesheet" crossorigin="" href="./css/technology.min.css?v=1756449078081">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -56,7 +56,7 @@
 				<section class="page__technology technology">
 					<div class="technology__container">
 						<div class="technology__body">
-							<div class="technology__content">
+							<div class="technology__content" data-fls-watcher="" data-fls-watcher-once="">
 								<h1 class="technology__title title">Технологія Prefab</h1>
 								<div class="technology__text">
 									<p>
@@ -66,7 +66,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="technology__how how">
+							<div class="technology__how how" data-fls-watcher="" data-fls-watcher-once="">
 								<h2 class="how__title title">Як це працює ?</h2>
 								<div class="how__steps">
 									<div class="how__step step">
@@ -85,7 +85,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="technology__advantages advantages">
+							<div class="technology__advantages advantages" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5">
 								<h2 class="advantages__title title">Переваги Prefab-Технології</h2>
 								<ul class="advantages__list">
 									<li>Швидкість</li>
@@ -102,7 +102,7 @@
 						</picture>
 					</div>
 				</section>
-				<section class="page__delivery delivery delivery--tech">
+				<section class="page__delivery delivery delivery--tech" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5">
 					<div class="delivery__container">
 						<div class="delivery__body">
 							<div class="delivery__content">
@@ -113,7 +113,7 @@
 											Ми швидко та надійно доставимо ваш будинок в будь-яку точку Європи, гарантуючи бездоганну якість без кордонів.
 										</p>
 									</div>
-									<button class="delivery__button button --icon-arrow" type="button">Доставка</button>
+									<button class="delivery__button button --icon-arrow" type="button" data-fls-popup-link="popup">Доставка</button>
 								</div>
 							</div>
 							<picture>
@@ -186,7 +186,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__logo">
+					<div class="footer__logo" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2">
 						<img src="./assets/img/logo-big.svg" alt="Image">
 					</div>
 					<div class="footer__copy">@2025 MODBUILD</div>
@@ -210,8 +210,8 @@
 				<div data-fls-popup-content="" class="popup__content">
 					<h2 class="popup__title">Потрібна Допомога ?</h2>
 					<div class="popup__text">Заповнивши форму, наш експерт зв'яжеться з вами за 1 хвилину</div>
-					<form action="" method="POST" class="popup__form form">
-						<input type="text" name="userPhone" data-error="Помилка" placeholder="Вкажіть Номер Телефону" class="popup__input input input--light">
+					<form action="" method="POST" class="popup__form form" data-fls-form="dev">
+						<input required type="text" name="userPhone" data-error="Помилка" placeholder="Вкажіть Номер Телефону" class="popup__input input input--light">
 						<button type="submit" class="popup__button button --icon-arrow">Допомога</button>
 						<ul class="popup__social social">
 							<li>
@@ -237,9 +237,9 @@
 						</ul>
 						<label data-fls-checkbox="" class="popup__checkbox checkbox checkbox--light">
 							<input required data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="policy">
-							<span class="checkbox__text">
-								<a href="">Мені не потрібна допомога</a>
-							</span>
+							<div class="checkbox__text">
+								<button type="button" data-fls-popup-close="">Мені не потрібна допомога</button>
+							</div>
 						</label>
 					</form>
 				</div>
