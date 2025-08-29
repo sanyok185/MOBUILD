@@ -315,11 +315,9 @@ body {
 .footer__logo {
   transition: all 1s ease-in-out;
   opacity: 0;
-  transform: translate(0, 0.3125rem);
 }
 .footer__logo.--watcher-view {
   opacity: 1;
-  transform: translate(0, 0);
 }
 .footer__copy {
   max-width: 59.375rem;
