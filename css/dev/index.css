@@ -54,7 +54,7 @@
   width: auto;
   display: inline-block;
   position: relative;
-  padding-bottom: 1.8125rem;
+  padding-bottom: 1.25rem;
 }
 .--spoller-init .spollers__title.--spoller-active span::after {
   content: "";
@@ -593,7 +593,7 @@ textarea.input {
   position: relative;
 }
 .houses__container::before {
-  z-index: -1;
+  z-index: 11;
   content: "";
   position: absolute;
   width: 15.507125rem;
@@ -606,13 +606,14 @@ textarea.input {
   filter: blur(8.3731346130375rem);
 }
 .houses__container::after {
-  z-index: -1;
+  z-index: 11;
   content: "";
   position: absolute;
   width: 15.507125rem;
   height: 18.9276875rem;
   transform: rotate(53.869deg);
   flex-shrink: 0;
+  bottom: 26.0625rem;
   right: -9.9375rem;
   border-radius: 22.7226875rem;
   background: linear-gradient(262deg, rgba(136, 168, 181, 0.72) 4.87%, rgba(191, 133, 79, 0.72) 87.02%);
@@ -661,7 +662,7 @@ textarea.input {
   position: relative;
 }
 .houses__cards::before {
-  z-index: -1;
+  z-index: 11;
   content: "";
   position: absolute;
   width: 18.6163125rem;
@@ -673,7 +674,7 @@ textarea.input {
   filter: blur(8.3731346130375rem);
 }
 .houses__cards::after {
-  z-index: -1;
+  z-index: 11;
   content: "";
   position: absolute;
   width: 18.6163125rem;
@@ -716,8 +717,11 @@ textarea.input {
   /* .item-house__info */
 }
 .item-house__image {
+  border-bottom: 0.0625rem solid #242529;
+  border-right: 0.0625rem solid #242529;
+  padding-bottom: -0.0625rem;
   cursor: pointer;
-  border-radius: 0.5625rem;
+  border-radius: 0.5625rem 0.5625rem 0 0.5625rem;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -736,6 +740,7 @@ textarea.input {
   object-fit: cover;
 }
 .item-house__name {
+  margin-bottom: -0.0625rem;
   color: #fff;
   border-radius: 2.5rem 0 0 0rem;
   padding: 1.625rem 2.0625rem 1.3125rem 2.0625rem;
@@ -1074,7 +1079,6 @@ textarea.input {
     flex-direction: column-reverse;
   }
   .faq__body {
-    border-bottom: 0.0625rem solid rgba(197, 210, 12, 0.9);
     padding-bottom: 1.5625rem;
   }
   .consultation__body {
@@ -1337,9 +1341,6 @@ textarea.input {
   .houses__container::before {
     left: -6.25rem;
   }
-  .houses__container::after {
-    bottom: 3.75rem;
-  }
   .houses__content {
     margin-bottom: 1.875rem;
   }
@@ -1492,9 +1493,6 @@ textarea.input {
   }
   .houses__container::before {
     left: clamp( -16.5rem , -4.0516085790875rem  +  -10.9919571046vw , -6.25rem );
-  }
-  .houses__container::after {
-    bottom: clamp( 3.75rem , -0.23123324396875rem  +  19.9061662198vw , 22.3125rem );
   }
   .houses__content {
     margin-bottom: clamp( 1.875rem , 1.53987935656875rem  +  1.6756032172vw , 3.4375rem );
@@ -1858,9 +1856,6 @@ textarea.input {
   }
   .houses__container::before {
     left: -16.5rem;
-  }
-  .houses__container::after {
-    bottom: 22.3125rem;
   }
   .houses__content {
     margin-bottom: 3.4375rem;
