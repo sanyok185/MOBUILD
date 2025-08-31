@@ -38,7 +38,7 @@
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(0, -70%);
+  transform: translate(0, -35%);
   font-size: 0.8125rem;
   transition: all 0.5s;
   content: "\f101";
@@ -54,7 +54,6 @@
   width: auto;
   display: inline-block;
   position: relative;
-  padding-bottom: 1.25rem;
 }
 .--spoller-init .spollers__title.--spoller-active span::after {
   content: "";

@@ -551,6 +551,7 @@ body::after {
 .popup__input {
   max-width: 14.8125rem;
   margin-bottom: 1.5rem;
+  border-radius: none !important;
 }
 .popup__form {
   display: flex;
