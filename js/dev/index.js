@@ -5329,7 +5329,7 @@ function pageNavigation() {
         const gotoLink = targetElement.closest("[data-fls-scrollto]");
         const gotoLinkSelector = gotoLink.dataset.flsScrollto ? gotoLink.dataset.flsScrollto : "";
         const noHeader = gotoLink.hasAttribute("data-fls-scrollto-header") ? true : false;
-        const gotoSpeed = gotoLink.dataset.flsScrolltoSpeed ? gotoLink.dataset.flsScrolltoSpeed : 500;
+        const gotoSpeed = gotoLink.dataset.flsScrolltoSpeed ? gotoLink.dataset.flsScrolltoSpeed : 800;
         const offsetTop = gotoLink.dataset.flsScrolltoTop ? parseInt(gotoLink.dataset.flsScrolltoTop) : 0;
         if (window.fullpage) {
           const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest("[data-fls-fullpage-section]");
@@ -5371,14 +5371,38 @@ function pageNavigation() {
       }
     }
   }
-  if (getHash()) {
-    let goToHash;
-    if (document.querySelector(`#${getHash()}`)) {
-      goToHash = `#${getHash()}`;
-    } else if (document.querySelector(`.${getHash()}`)) {
-      goToHash = `.${getHash()}`;
+  function scrollToHash(force = false) {
+    const hash = getHash();
+    if (hash) {
+      let goToHash;
+      if (document.querySelector(`#${hash}`)) {
+        goToHash = `#${hash}`;
+      } else if (document.querySelector(`.${hash}`)) {
+        goToHash = `.${hash}`;
+      }
+      if (goToHash) {
+        gotoBlock(goToHash);
+        updateMain(force);
+      }
     }
-    goToHash ? gotoBlock(goToHash) : null;
+  }
+  scrollToHash(true);
+  window.addEventListener("hashchange", () => scrollToHash(true));
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (link) {
+      const targetHash = link.getAttribute("href").substring(1);
+      if (targetHash === getHash()) {
+        scrollToHash(true);
+      }
+    }
+  });
+  function updateMain(force = false) {
+    const main = document.querySelector("main");
+    if (main) {
+      main.classList.remove("updated");
+      setTimeout(() => main.classList.add("updated"), 10);
+    }
   }
 }
 document.querySelector("[data-fls-scrollto]") ? window.addEventListener("load", pageNavigation) : null;
