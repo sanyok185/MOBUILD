@@ -45,7 +45,7 @@ function spollers() {
           const spollersBlock = spollerTitle.closest("[data-fls-spollers]");
           const oneSpoller = spollersBlock.hasAttribute("data-fls-spollers-one");
           const scrollSpoller = spollerBlock.hasAttribute("data-fls-spollers-scroll");
-          const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 500;
+          const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 400;
           if (!spollersBlock.querySelectorAll(".--slide").length) {
             if (oneSpoller && !spollerBlock.open) {
               hideSpollersBody(spollersBlock);
