@@ -14,10 +14,10 @@ function spollers() {
         }
       });
     }, initSpollerBody = function(spollersBlock, hideSpollerBody = true) {
-      let spollerItems = spollersBlock.querySelectorAll("details");
+      let spollerItems = spollersBlock.querySelectorAll(".spollers__item");
       if (spollerItems.length) {
         spollerItems.forEach((spollerItem) => {
-          let spollerTitle = spollerItem.querySelector("summary");
+          let spollerTitle = spollerItem.querySelector(".spollers__title");
           if (hideSpollerBody) {
             spollerTitle.removeAttribute("tabindex");
             if (!spollerItem.hasAttribute("data-fls-spollers-open")) {
@@ -37,11 +37,11 @@ function spollers() {
       }
     }, setSpollerAction = function(e) {
       const el = e.target;
-      if (el.closest("summary") && el.closest("[data-fls-spollers]")) {
+      if (el.closest(".spollers__title") && el.closest("[data-fls-spollers]")) {
         e.preventDefault();
         if (el.closest("[data-fls-spollers]").classList.contains("--spoller-init")) {
-          const spollerTitle = el.closest("summary");
-          const spollerBlock = spollerTitle.closest("details");
+          const spollerTitle = el.closest(".spollers__title");
+          const spollerBlock = spollerTitle.closest(".spollers__item");
           const spollersBlock = spollerTitle.closest("[data-fls-spollers]");
           const oneSpoller = spollersBlock.hasAttribute("data-fls-spollers-one");
           const scrollSpoller = spollerBlock.hasAttribute("data-fls-spollers-scroll");
@@ -76,7 +76,7 @@ function spollers() {
             const spollersBlock = spollerClose.closest("[data-fls-spollers]");
             const spollerCloseBlock = spollerClose.parentNode;
             if (spollersBlock.classList.contains("--spoller-init")) {
-              const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 500;
+              const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 400;
               spollerClose.classList.remove("--spoller-active");
               slideUp(spollerClose.nextElementSibling, spollerSpeed);
               setTimeout(() => {
@@ -87,9 +87,9 @@ function spollers() {
         }
       }
     }, hideSpollersBody = function(spollersBlock) {
-      const spollerActiveBlock = spollersBlock.querySelector("details[open]");
+      const spollerActiveBlock = spollersBlock.querySelector(".spollers__item[open]");
       if (spollerActiveBlock && !spollersBlock.querySelectorAll(".--slide").length) {
-        const spollerActiveTitle = spollerActiveBlock.querySelector("summary");
+        const spollerActiveTitle = spollerActiveBlock.querySelector(".spollers__title");
         const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 500;
         spollerActiveTitle.classList.remove("--spoller-active");
         slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
