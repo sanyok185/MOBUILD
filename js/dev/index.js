@@ -1,4 +1,4 @@
-import { d as dataMediaQueries, s as slideToggle, a as slideUp, b as bodyUnlock, g as gotoBlock, c as getHash } from "./popup.min.js";
+import { d as dataMediaQueries, s as slideUp, a as slideToggle, b as bodyUnlock, g as gotoBlock, c as getHash } from "./popup.min.js";
 function spollers() {
   const spollersArray = document.querySelectorAll("[data-fls-spollers]");
   if (spollersArray.length > 0) {
@@ -44,58 +44,26 @@ function spollers() {
           const spollerBlock = spollerTitle.closest(".spollers__item");
           const spollersBlock = spollerTitle.closest("[data-fls-spollers]");
           const oneSpoller = spollersBlock.hasAttribute("data-fls-spollers-one");
-          const scrollSpoller = spollerBlock.hasAttribute("data-fls-spollers-scroll");
           const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 400;
           if (!spollersBlock.querySelectorAll(".--slide").length) {
             if (oneSpoller && !spollerBlock.open) {
-              hideSpollersBody(spollersBlock);
+              const activeItems = spollersBlock.querySelectorAll(".spollers__item[open]");
+              activeItems.forEach((activeItem) => {
+                const activeTitle = activeItem.querySelector(".spollers__title");
+                activeTitle.classList.remove("--spoller-active");
+                slideUp(activeTitle.nextElementSibling, spollerSpeed);
+                setTimeout(() => {
+                  activeItem.open = false;
+                }, spollerSpeed);
+              });
             }
             !spollerBlock.open ? spollerBlock.open = true : setTimeout(() => {
               spollerBlock.open = false;
             }, spollerSpeed);
             spollerTitle.classList.toggle("--spoller-active");
             slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
-            if (scrollSpoller && spollerTitle.classList.contains("--spoller-active")) {
-              const scrollSpollerValue = spollerBlock.dataset.flsSpollersScroll;
-              const scrollSpollerOffset = +scrollSpollerValue ? +scrollSpollerValue : 0;
-              const scrollSpollerNoHeader = spollerBlock.hasAttribute("data-fls-spollers-scroll-noheader") ? document.querySelector(".header").offsetHeight : 0;
-              window.scrollTo(
-                {
-                  top: spollerBlock.offsetTop - (scrollSpollerOffset + scrollSpollerNoHeader),
-                  behavior: "smooth"
-                }
-              );
-            }
           }
         }
-      }
-      if (!el.closest("[data-fls-spollers]")) {
-        const spollersClose = document.querySelectorAll("[data-fls-spollers-close]");
-        if (spollersClose.length) {
-          spollersClose.forEach((spollerClose) => {
-            const spollersBlock = spollerClose.closest("[data-fls-spollers]");
-            const spollerCloseBlock = spollerClose.parentNode;
-            if (spollersBlock.classList.contains("--spoller-init")) {
-              const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 400;
-              spollerClose.classList.remove("--spoller-active");
-              slideUp(spollerClose.nextElementSibling, spollerSpeed);
-              setTimeout(() => {
-                spollerCloseBlock.open = false;
-              }, spollerSpeed);
-            }
-          });
-        }
-      }
-    }, hideSpollersBody = function(spollersBlock) {
-      const spollerActiveBlock = spollersBlock.querySelector(".spollers__item[open]");
-      if (spollerActiveBlock && !spollersBlock.querySelectorAll(".--slide").length) {
-        const spollerActiveTitle = spollerActiveBlock.querySelector(".spollers__title");
-        const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 500;
-        spollerActiveTitle.classList.remove("--spoller-active");
-        slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
-        setTimeout(() => {
-          spollerActiveBlock.open = false;
-        }, spollerSpeed);
       }
     };
     document.addEventListener("click", setSpollerAction);

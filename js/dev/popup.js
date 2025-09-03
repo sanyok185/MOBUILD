@@ -934,10 +934,10 @@ document.addEventListener("formSent", function(e) {
   }, 500);
 });
 export {
-  slideUp as a,
+  slideToggle as a,
   bodyUnlock as b,
   getHash as c,
   dataMediaQueries as d,
   gotoBlock as g,
-  slideToggle as s
+  slideUp as s
 };
