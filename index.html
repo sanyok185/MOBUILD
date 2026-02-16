@@ -9,10 +9,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="img/favicon/site.webmanifest">
 		<title>MODBUILD</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1757064275704"></script>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1771226958916"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1757064275704">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1757064275704">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1771226958916">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1771226958916">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -600,7 +600,7 @@
 								<h2 class="consultation__title title title--dark">Заповніть Форму</h2>
 								<div class="consultation__subtitle">на безкоштовну консультацію</div>
 							</div>
-							<form action="" method="POST" class="form" data-fls-form="dev">
+							<form data-fls-form="dev" data-fls-form-popup="popup-success" action="#" method="POST" class="form">
 								<div class="form__inputs">
 									<input required data-fls-input="" type="text" name="userName" data-error="Помилка" placeholder="Ім'я" class="form__input input">
 									<input required data-fls-input="" type="text" name="phone" data-error="Помилка" placeholder="Телефон" class="form__input input">
@@ -741,5 +741,23 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div data-fls-popup="popup-success" aria-hidden="true" class="popup">
+		<div data-fls-popup-wrapper="" class="popup__wrapper">
+			<div data-fls-popup-body="" class="popup__body">
+				<div class="popup__header">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 15 15" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 15C3.96446 15 2.1967 15 1.09835 13.9016C-8.9407e-08 12.8033 0 11.0355 0 7.5C0 3.96446 -8.9407e-08 2.1967 1.09835 1.09835C2.1967 -8.9407e-08 3.96446 0 7.5 0C11.0355 0 12.8033 -8.9407e-08 13.9016 1.09835C15 2.1967 15 3.96446 15 7.5C15 11.0355 15 12.8033 13.9016 13.9016C12.8033 15 11.0355 15 7.5 15ZM5.22724 5.22725C5.44691 5.00759 5.80307 5.00759 6.02273 5.22725L7.5 6.70455L8.9772 5.22727C9.19687 5.0076 9.55305 5.0076 9.77273 5.22727C9.9924 5.44694 9.9924 5.80309 9.77273 6.02273L8.29545 7.5L9.77273 8.97727C9.9924 9.19687 9.9924 9.55305 9.77273 9.77273C9.55305 9.9924 9.19687 9.9924 8.9772 9.77273L7.5 8.29553L6.02273 9.77273C5.80308 9.9924 5.44692 9.9924 5.22725 9.77273C5.00759 9.55305 5.00759 9.19695 5.22725 8.97727L6.70447 7.5L5.22724 6.02273C5.00757 5.80308 5.00757 5.44692 5.22724 5.22725Z" fill="white"></path>
+						</svg>
+					</button>
+				</div>
+				<div data-fls-popup-content="" class="popup-success__content">
+					<h2 class="popup-success__title">Дякуємо за заявку!</h2>
+					<div class="popup-success__text">Ми зв'яжемося з вами найближчим часом!</div>
+				</div>
+			</div>
+		</div>
+		for
 	</div>
 </html>

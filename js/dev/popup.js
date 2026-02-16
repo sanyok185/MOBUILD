@@ -780,7 +780,6 @@ function formInit() {
           popup ? window.flsPopup.open(popup) : null;
         }
       }, 0);
-      formValidate.formClean(form);
     }
   }
   function formFieldsInit() {

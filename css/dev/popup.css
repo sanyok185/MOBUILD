@@ -510,6 +510,9 @@ body::after {
 .popup__logo {
   margin-top: 0.125rem;
 }
+.popup__close {
+  margin-left: auto;
+}
 .popup__content {
   text-align: center;
   align-items: center;
@@ -566,21 +569,44 @@ body::after {
   flex-direction: column;
   align-items: center;
 }
+
+.popup-success__title {
+  font-size: 2.25rem;
+  line-height: 1.4;
+}
+
+.popup-success__content {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.875rem 6.25rem 1.875rem;
+}
+
+.popup-success__text {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
 @media (max-width: 47.99875em) and (min-width: 47.99875em){
   .menu__link {
     font-size: 1.6875rem;
   }
 }
+
 @media (max-width: 47.99875em) and (max-width: 20em){
   .menu__link {
     font-size: 1.3125rem;
   }
 }
+
 @media (max-width: 47.99875em) and (any-hover: none){
   .icon-menu {
     cursor: default;
   }
 }
+
 @media (max-width: 47.99875em){
   .menu__body {
     background-color: #242529;
@@ -674,12 +700,20 @@ body::after {
   .footer__list {
     justify-content: space-around;
   }
+  .popup-success__title {
+    font-size: 1.875rem;
+  }
+  .popup-success__text {
+    font-size: 1rem;
+  }
 }
+
 @media (max-width: 29.99875em){
   .menu__link {
     padding-bottom: 1.5625rem;
   }
 }
+
 @media (max-width: 20em){
   .button {
     font-size: 0.875rem;
@@ -727,11 +761,13 @@ body::after {
     margin-left: 0.3125rem;
   }
 }
+
 @media (max-width: 47.99875em) and (min-width: 20em) and (max-width: 47.99875em){
   .menu__link {
     font-size: clamp( 1.3125rem , 1.0446308987rem  +  1.3393455065vw , 1.6875rem );
   }
 }
+
 @media (min-width: 20em) and (max-width: 113.25em){
   .button {
     font-size: clamp( 0.875rem , 0.848190348525rem  +  0.1340482574vw , 1rem );
@@ -779,6 +815,7 @@ body::after {
     margin-left: clamp( 0.3125rem , 0.1650469168875rem  +  0.7372654155vw , 1rem );
   }
 }
+
 @media (min-width: 47.99875em) and (min-width: 47.99875em) and (max-width: 113.125em){
   .menu__item:not(:last-child) {
     padding-right: clamp( 1.25rem , -1.05315876854375rem  +  4.7983723921vw , 4.375rem );
@@ -793,6 +830,7 @@ body::after {
     margin-left: clamp( 1.25rem , -0.40827431335rem  +  3.4548281223vw , 3.5rem );
   }
 }
+
 @media (min-width: 47.99875em) and (min-width: 47.99875em) and (max-width: 111.25em){
   .header {
     padding-top: clamp( 1.875rem , 0.45214027390625rem  +  2.9643682931vw , 3.75rem );
@@ -801,6 +839,7 @@ body::after {
     padding-bottom: clamp( 1.875rem , 0.45214027390625rem  +  2.9643682931vw , 3.75rem );
   }
 }
+
 @media (min-width: 47.99875em) and (min-width: 113.125em){
   .menu__item:not(:last-child) {
     padding-right: 4.375rem;
@@ -815,6 +854,7 @@ body::after {
     margin-left: 3.5rem;
   }
 }
+
 @media (min-width: 47.99875em) and (min-width: 111.25em){
   .header {
     padding-top: 3.75rem;
@@ -823,6 +863,7 @@ body::after {
     padding-bottom: 3.75rem;
   }
 }
+
 @media (min-width: 47.99875em) and (max-width: 47.99875em){
   .menu__item:not(:last-child) {
     padding-right: 1.25rem;
@@ -843,6 +884,7 @@ body::after {
     margin-left: 1.25rem;
   }
 }
+
 @media (min-width: 113.25em){
   .button {
     font-size: 1rem;
@@ -890,6 +932,7 @@ body::after {
     margin-left: 1rem;
   }
 }
+
 @media (any-hover: hover){
   .button:hover {
     background-color: #83a1ac;
