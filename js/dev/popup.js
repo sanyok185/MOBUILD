@@ -769,17 +769,13 @@ function formInit() {
       }
     }
     function formSent(form, responseResult = ``) {
-      document.dispatchEvent(new CustomEvent("formSent", {
-        detail: {
-          form
-        }
-      }));
       setTimeout(() => {
         if (window.flsPopup) {
           const popup = form.dataset.flsFormPopup;
           popup ? window.flsPopup.open(popup) : null;
         }
       }, 0);
+      formValidate.formClean(form);
     }
   }
   function formFieldsInit() {
@@ -808,10 +804,13 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+document.addEventListener("submit", function(e) {
+  e.preventDefault();
+});
 class ScrollWatcher {
   constructor(props) {
     let defaultConfig = {
-      logging: true
+      logging: false
     };
     this.config = Object.assign(defaultConfig, props);
     this.observer;
